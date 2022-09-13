@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "postgress",
-    "password": admin,
+    "username": "postgres",
+    "password": "admin",
     "database": "db_ch7_okky",
     "host": "127.0.0.1",
-    "dialect": "postgress"
+    "dialect": "postgres"
   },
   "test": {
-    "username": "postgress",
-    "password": admin,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "postgress"
-  },
-  "production": {
-    "username": "postgress",
-    "password": admin,
+    "username": "postgres",
+    "password": "admin",
     "database": "db_ch7_okky",
     "host": "127.0.0.1",
-    "dialect": "postgress"
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "db_ch7_okky",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   }
 }
