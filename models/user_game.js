@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     isSuperAdmin: {
       defaultValue: false,
       type: DataTypes.BOOLEAN
-    }, {
+    }
+  }, {
     sequelize,
     modelName: 'user_game',
   });

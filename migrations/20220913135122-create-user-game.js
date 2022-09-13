@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       isSuperAdmin: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
         defaultValue: false
       },
       createdAt: {
