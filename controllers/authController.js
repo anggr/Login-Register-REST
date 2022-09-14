@@ -1,9 +1,9 @@
 module.exports = {
     viewLogin: (req, res) => {
-        res.send('halaman login')
+        res.render('login')
     },
     viewRegister: (req, res) => {
-        res.send('halaman register')
+        res.render('register')
     },
     login: (req, res) => {
         res.send('halaman logic login')
