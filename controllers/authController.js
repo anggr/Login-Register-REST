@@ -9,6 +9,8 @@ module.exports = {
         res.send('halaman logic login')
     },
     register: (req, res) => {
-        res.send('logic register')
+        let { username, password, firstName, lastName, birthplace } = req.body
+        // res.send('logic register')
+        console.log(username, password, firstName, lastName, birthplace)
     }
 }
