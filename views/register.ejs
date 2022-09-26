@@ -12,58 +12,57 @@
         <%- include('./partials/navbar') %>
             <!-- End Navbar -->
 
-            <body>
-                <div class="container d-flex align-items-center justify-content-center">
-                    <form action="/register" class="box-shadow p-5 w-50" method="POST">
-                        <div class="img-text text-center">
-                            <h2 class="text-center px-4">
-                                CREATE NEW <span class="color">USER</span>
-                            </h2>
-                        </div>
-                        <div class="mb-4">
-                            <label for="name" class="form-label">User Name</label>
-                            <input type="text" class="form-control" id="name" name="username"
-                                aria-describedby="emailHelp" />
-                        </div>
-                        <div class="mb-4">
-                            <label for="password class=" form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="password" />
-                        </div>
-                        <div class="mb-4">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" name="firstName" id="firstName" />
-                        </div>
-                        <div class="mb-4">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" name="lastName" id="lastName" />
-                        </div>
-                        <div class="mb-4">
-                            <label for="birthplace" class="form-label">Birthplace</label>
-                            <input type="text" class="form-control" name="birthplace" id="birthplace" />
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100 css-button-sliding-to-bottom--blue"
-                            id="submit">
-                            Submit
-                        </button>
-                    </form>
-                </div>
-                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                <script>
-                    const submit = document.getElementById('submit');
-                    submit.addEventListener('click', () => {
-                        Swal.fire({
-                            title: 'Success',
-                            html: 'User data created successfully',
-                            // <br><h3>back to /users</h3> or <br><h3 style="display: inline"><a href="http://localhost:3000/users">check here</a></h3> if you use port <span style="color: red; font-weight: bold; font-size: 25px;">3000</span>
-                            icon: 'success',
-                            confirmButtonText: 'close',
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                location.reload();
-                            }
-                        });
+
+            <div class="container d-flex align-items-center justify-content-center">
+                <form action="/register" class="box-shadow p-5 w-50" method="POST">
+                    <div class="img-text text-center">
+                        <h2 class="text-center px-4">
+                            CREATE NEW <span class="color">USER</span>
+                        </h2>
+                    </div>
+                    <div class="mb-4">
+                        <label for="name" class="form-label">User Name</label>
+                        <input type="text" class="form-control" id="name" name="username"
+                            aria-describedby="emailHelp" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="password class=" form-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="firstName" id="firstName" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="lastName" id="lastName" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="birthplace" class="form-label">Birthplace</label>
+                        <input type="text" class="form-control" name="birthplace" id="birthplace" />
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 css-button-sliding-to-bottom--blue" id="submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+                const submit = document.getElementById('submit');
+                submit.addEventListener('click', () => {
+                    Swal.fire({
+                        title: 'Success',
+                        html: 'User data created successfully',
+                        // <br><h3>back to /users</h3> or <br><h3 style="display: inline"><a href="http://localhost:3000/users">check here</a></h3> if you use port <span style="color: red; font-weight: bold; font-size: 25px;">3000</span>
+                        icon: 'success',
+                        confirmButtonText: 'close',
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
                     });
-                </script>
-            </body>
+                });
+            </script>
+</body>
 
 </html>

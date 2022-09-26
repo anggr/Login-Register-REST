@@ -1,4 +1,5 @@
 const { user_game, user_game_biodata } = require('../models')
+const passport = require('../lib/passport-local')
 
 module.exports = {
     viewLogin: (req, res) => {
@@ -7,9 +8,11 @@ module.exports = {
     viewRegister: (req, res) => {
         res.render('register')
     },
-    login: (req, res) => {
-        res.send('halaman logic login')
-    },
+    login: passport.authenticate('local', {
+        successRedirect: '/dashboard',
+        failureRedirect: '/login',
+        failureFlash: true // Untuk mengaktifkan express flash
+    }),
     register: (req, res) => {
         let { username, password, firstName, lastName, birthplace } = req.body
         user_game.register({ username, password })
@@ -19,7 +22,7 @@ module.exports = {
                     first_Name: firstName,
                     last_Name: lastName,
                     birthplace
-                }).then(response =>{
+                }).then(response => {
                     res.redirect('/login')
                 })
             })
